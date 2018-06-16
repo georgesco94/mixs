@@ -6,6 +6,7 @@ import Footer from "../src/components/footer";
 import Home from "../src/components/home";
 import EventPage from "../src/components/eventPage";
 
+import './styles/reset.css';
 
 class App extends Component {
   render() {
@@ -14,7 +15,6 @@ class App extends Component {
         <div className="App">
           <Nav />
           <Home />
-          <Route exact path={`/event`} component={EventPage} />
           <Footer />
         </div>
       </Router>

@@ -6,7 +6,7 @@ import Footer from "../src/components/footer";
 import Home from "../src/components/home";
 import EventPage from "../src/components/eventPage";
 
-import './styles/reset.css';
+import './styles/app.css';
 
 class App extends Component {
   render() {

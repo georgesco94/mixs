@@ -11,16 +11,6 @@ import './styles/app.css';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      activities: []
-    };
-  }
-
-  componentDidMount() {
-    fetch('http://www.mocky.io/v2/5b25c0ad310000d30f6a7254')
-      .then( results => results.json()).then(acts => {
-        this.setState( { activities: acts } );
-      });
   }
 
   render() {
@@ -28,7 +18,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Nav />
-          <Home activities={this.state.activities} />
+          <Home />
           <Footer />
         </div>
       </Router>

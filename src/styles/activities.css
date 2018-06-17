@@ -1,9 +1,14 @@
 
 .activities {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .activities-grid {
-  width: 80%;
+  width: 90%;
+  margin-top: 10px;
   background: red;
   height: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr)
 }

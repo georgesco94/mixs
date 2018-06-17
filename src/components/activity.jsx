@@ -3,32 +3,31 @@ import '../styles/main.css';
 import '../styles/activity.css';
 
 class Activity extends Component {
-  constructor(props) {
-    super(props);
-  }
+
   componentDidMount() {
     this.props.updateSelected(this.props.match.params.id);
   }
+
   render() {
     if (!this.props.activity) return null ;
-    const {image,description,location,city,date} = this.props.activity;
+    const {image,description,location,city,date,duration} = this.props.activity;
+
     return (
       <div className="main">
         <div className="acitvity-grid">
 
           <div className="image-description-box">
-            <div className="activity-image">
-              <img className="activity-image" src={image} />
+            <div className="img-container">
+              <img className="activity-img" src={image} />
             </div>
             <div className="activity-text">
-              {description}
-              Come to {location}
+              {description}. <br/>
+              Come to {location} in {city}!
             </div>
           </div>
 
           <div className="map-location-box">
-            {this.props.activity.city}
-            {this.props.activity.location}
+            {city} for {duration} hours
           </div>
 
         </div>

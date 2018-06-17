@@ -22,11 +22,11 @@ class Activities extends Component {
   }
 
   render() {
-    console.log(this.props.filterText);
     const activities = this.state.activities;
-    const activityItems = activities.map( (activity) => {
-      return (<ActivtitiesItem activity={activity} />);
+    const activityItems = activities.map( (activity,idx) => {
+      return (<ActivtitiesItem key={idx} activity={activity} />);
     });
+
     return (
       <div className="activities">
         <div className="activities-grid">

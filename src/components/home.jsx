@@ -7,9 +7,6 @@ import Activities from './activities';
 import '../styles/home.css';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const {activities,filterText} = this.props;
     return (

@@ -22,7 +22,10 @@ class App extends Component {
       <Router>
         <div className="App">
           <Nav />
-          <Route exact path="/" render={(props) => <Home {...props} filterText={this.state.filterText} />} />
+          <Route
+            exact path="/"
+            render={(props) => <Home {...props} filterText={this.state.filterText} />} />
+
           <Activity path="/events" />
           <Footer />
         </div>

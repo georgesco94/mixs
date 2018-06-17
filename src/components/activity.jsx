@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
 
 class Activity extends Component {
 
   render() {
+    console.log('rendering');
     return (
-      <div className="activity-box">
+      <div className="home">
         Single activity
       </div>
     );

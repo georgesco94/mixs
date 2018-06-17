@@ -1,0 +1,9 @@
+
+.activities {
+  width: 100%;
+}
+.activities-grid {
+  width: 80%;
+  background: red;
+  height: 30px;
+}

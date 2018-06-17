@@ -7,11 +7,14 @@ import Activities from './activities';
 import '../styles/home.css';
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <div className="home">
         <Banner />
-        <Activities />
+        <Activities activities={this.props.activities} />
       </div>
     );
   }

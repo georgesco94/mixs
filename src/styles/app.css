@@ -1,5 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
+  height: 100vh;
 }
 input {
   width: 100%;
@@ -12,4 +13,13 @@ input:focus{
   text-decoration: none;
   outline: none;
   caret-color: white;
+}
+html,body {
+  height: 100%;
+  position: relative;
+}
+
+.App {
+  min-height: 100vh;
+  position: relative;
 }

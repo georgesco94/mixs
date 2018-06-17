@@ -12,7 +12,7 @@ class Nav extends Component {
           <div className="nav-title">
             <Link to="/">DiscoverMixs</Link>
           </div>
-          <Search />
+          <Search updateFilterText={this.props.updateFilterText}/>
         </div>
       </div>
     );

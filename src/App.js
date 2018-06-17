@@ -17,6 +17,8 @@ class App extends Component {
       selected:1
     };
     this.updateSelected = this.updateSelected.bind(this);
+    this.updateFilterText = this.updateFilterText.bind(this);
+    this.getFilteredActivities = this.getFilteredActivities.bind(this);
   }
 
   componentDidMount() {
@@ -33,13 +35,32 @@ class App extends Component {
     this.setState( {selected : id} );
   }
 
+  updateFilterText(e) {
+    const filterString = e.target.value;
+    this.setState( {filterText: filterString} );
+  }
+
+  getFilteredActivities() {
+    const activities = Object.values(this.state.activities);
+    const filterText = this.state.filterText;
+
+    const filteredActivities = activities.filter( (activity) => {
+      return (
+        (activity.location.includes(filterText) || activity.city.includes(filterText))
+      );
+    });
+
+    return filteredActivities;
+  }
+
   render() {
     const selected = this.state.selected;
-    const activities = this.state.activities;
+    const activities = this.getFilteredActivities();
+
     return (
       <Router>
         <div className="App">
-          <Nav />
+          <Nav updateFilterText={this.updateFilterText}/>
           <Route
             exact path="/"
             render={(props) => <Home {...props} activities={activities} />} />

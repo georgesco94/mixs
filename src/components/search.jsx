@@ -8,7 +8,7 @@ class Search extends Component {
       <div className="search">
         <div className="search-input-box">
           <i className="fas fa-search"></i>
-          <input className="input-field" type='text' />
+          <input className="input-field" type='text' onChange={this.props.updateFilterText}/>
         </div>
       </div>
     );

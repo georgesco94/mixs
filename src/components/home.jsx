@@ -4,7 +4,8 @@ class Home extends Component {
   render() {
     return (
       <div className="App">
-        home
+        banner image
+        list of mix activities
       </div>
     );
   }

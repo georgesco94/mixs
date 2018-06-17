@@ -10,9 +10,9 @@ class Footer extends Component {
           <div className="footer-text">by George Najm</div>
           <div className="footer-links">
             <a href="http://github.com/georgesco94">
-              <i class="fab fa-github"></i></a>
+              <i className="fab fa-github"></i></a>
             <a href="http://linkedin.com/in/george-najm-707003149/">
-              <i class="fab fa-linkedin-in"></i></a>
+              <i className="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Banner from './banner';
+import Activities from './activities';
 
 
 
@@ -10,6 +11,7 @@ class Home extends Component {
     return (
       <div className="home">
         <Banner />
+        <Activities />
       </div>
     );
   }

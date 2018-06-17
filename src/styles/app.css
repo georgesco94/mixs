@@ -1,3 +1,15 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+input {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border:none;
+}
+input:focus{
+  border: none;
+  text-decoration: none;
+  outline: none;
+  caret-color: white;
+}

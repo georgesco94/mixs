@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 
+import '../styles/badge.css';
 class Badge extends Component {
   render() {
     const day = this.props.day;

@@ -20,7 +20,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://www.mocky.io/v2/5b25c0ad310000d30f6a7254')
+    const url = 'http://www.mocky.io/v2/5b26d6ac3000007f00ee27b5';
+
+    fetch(url)
       .then( results => results.json()).then(acts => {
         this.setState( { activities: acts } );
       }
@@ -30,7 +32,7 @@ class App extends Component {
   updateSelected(id) {
     this.setState( {selected : id} );
   }
-  
+
   render() {
     const selected = this.state.selected;
     const activities = this.state.activities;

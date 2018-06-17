@@ -24,11 +24,10 @@ class ActivtitiesItem extends Component {
     super(props);
   }
   render() {
-    const {image,date,city,location,description} = this.props.activity;
+    const {image,date,city,location,description,time} = this.props.activity;
     const id = this.props.activityId;
-
     const eventDate = new Date(date);
-    const day = eventDate.getDay();
+    const day = eventDate.getDate();
     const month = numToMonth[ eventDate.getMonth() ];
 
     return (
@@ -39,6 +38,8 @@ class ActivtitiesItem extends Component {
             <Badge day={day} month={month} />
           </div>
           <div className="activity-info-box">
+            <div className="location-text">{location} {month} {day}</div>
+            {description}
           </div>
         </Link>
       </div>

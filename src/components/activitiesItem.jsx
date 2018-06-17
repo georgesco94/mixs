@@ -5,9 +5,10 @@ class ActivtitiesItem extends Component {
     super(props);
   }
   render() {
+    const {image,date,city,location} = this.props.activity;
     return (
-      <div className="">
-        asdasdasd
+      <div className="activity-box">
+        {location}
       </div>
     );
   }

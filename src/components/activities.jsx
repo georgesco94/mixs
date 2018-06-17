@@ -24,7 +24,7 @@ class Activities extends Component {
   render() {
     const activities = this.state.activities;
     const activityItems = activities.map( (activity) => {
-      return (<ActivtitiesItem />);
+      return (<ActivtitiesItem activity={activity} />);
     });
     return (
       <div className="activities">

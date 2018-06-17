@@ -17,7 +17,8 @@ class Activities extends Component {
     fetch('http://www.mocky.io/v2/5b25c0ad310000d30f6a7254')
       .then( results => results.json()).then(acts => {
         this.setState( { activities: acts } );
-      });
+      }
+    );
   }
 
   render() {
@@ -25,7 +26,6 @@ class Activities extends Component {
     const activityItems = activities.map( (activity) => {
       return (<ActivtitiesItem />);
     });
-    console.log(activityItems);
     return (
       <div className="activities">
         <div className="activities-grid">

@@ -11,6 +11,9 @@ import './styles/app.css';
 class App extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      filterText: ""
+    };
   }
 
   render() {
@@ -18,7 +21,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Nav />
-          <Home />
+          <Home filterText={this.state.filterText} />
           <Footer />
         </div>
       </Router>

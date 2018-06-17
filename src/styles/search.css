@@ -19,3 +19,10 @@
   margin-left: 9px;
   color: white;
 }
+
+@media (max-width:470px) {
+  .search {
+    width: 120px;
+  }
+
+}

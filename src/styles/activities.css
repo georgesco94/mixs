@@ -31,5 +31,25 @@
 .date-badge {
   position: absolute;
   top: 0;
-  left: 0;
+  font-size: 15px;
+  background-color: white;
+  word-wrap: break-word;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 36px;
+  min-height: 36px;
+  padding: 8px;
+  border: 1px solid rgba(46,62,72,.12);
+  border-radius: 8px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.day {
+  font-size: 20px;
+  color: #f13a59;
+}
+.month {
+  color: rgba(46,62,72,.6);
+  text-transform: uppercase;
 }

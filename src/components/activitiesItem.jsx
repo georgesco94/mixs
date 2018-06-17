@@ -3,18 +3,18 @@ import { Route, Link } from 'react-router-dom';
 import Activity from './activity';
 
 const numToMonth = {
-  1: "January",
-  2: "February",
-  3: "March",
-  4: "April",
+  1: "Jan",
+  2: "Feb",
+  3: "Mar",
+  4: "Apr",
   5: "May",
-  6: "June",
-  7: "July",
-  8: "August",
-  9: "September",
-  10: "October",
-  11: "November",
-  12: "December"
+  6: "Jun",
+  7: "Jul",
+  8: "Aug",
+  9: "Sep",
+  10: "Oct",
+  11: "Nov",
+  12: "Dec"
 };
 
 
@@ -35,7 +35,8 @@ class ActivtitiesItem extends Component {
         <div className="activity-image-box">
           <img className="activity-image" src={image} />
           <div className="date-badge">
-            {month} {day}
+            <span className="day">{day}</span>
+            <span className="month">{month}</span>
           </div>
         </div>
         <div className="activity-info-box">

@@ -8,9 +8,11 @@ class ActivtitiesItem extends Component {
   }
   render() {
     const {image,date,city,location} = this.props.activity;
+    const id = this.props.activityId;
+
     return (
       <div className="activity-box">
-        <Link to={`/events`}>{location}</Link>
+        <Link to={`/events?${id}`}>{location}</Link>
       </div>
     );
   }

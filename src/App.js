@@ -12,8 +12,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activities: [],
-      filterText: ""
+      activities: {},
+      filterText: "",
+      selected:1
     };
   }
 
@@ -27,6 +28,7 @@ class App extends Component {
 
 
   render() {
+    const selected = this.state.selected;
     return (
       <Router>
         <div className="App">
@@ -36,7 +38,8 @@ class App extends Component {
             render={(props) => <Home {...props} activities={this.state.activities} />} />
           <Route
             path={`/events`}
-            render={ (props) => <Activity {...props}/>} />
+            render={ (props) => <Activity {...props}
+                      activity={this.state.activities[selected]} />} />
           <Footer />
         </div>
       </Router>

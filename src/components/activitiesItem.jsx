@@ -12,7 +12,7 @@ class ActivtitiesItem extends Component {
 
     return (
       <div className="activity-box">
-        <Link to={`/events?${id}`}>{location}</Link>
+        <Link to={`/events/${id}`}>{location}</Link>
       </div>
     );
   }

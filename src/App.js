@@ -16,6 +16,7 @@ class App extends Component {
       filterText: "",
       selected:1
     };
+    this.updateSelected = this.updateSelected.bind(this);
   }
 
   componentDidMount() {
@@ -26,20 +27,25 @@ class App extends Component {
     );
   }
 
-
+  updateSelected(id) {
+    this.setState( {selected : id} );
+  }
+  
   render() {
     const selected = this.state.selected;
+    const activities = this.state.activities;
     return (
       <Router>
         <div className="App">
           <Nav />
           <Route
             exact path="/"
-            render={(props) => <Home {...props} activities={this.state.activities} />} />
+            render={(props) => <Home {...props} activities={activities} />} />
           <Route
-            path={`/events`}
+            path={`/events/:id`}
             render={ (props) => <Activity {...props}
-                      activity={this.state.activities[selected]} />} />
+                      activity={activities[selected]}
+                      updateSelected={this.updateSelected}/>} />
           <Footer />
         </div>
       </Router>

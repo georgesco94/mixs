@@ -12,6 +12,6 @@
   grid-template-columns: repeat(3, 1fr)
 }
 .activity-box {
-  max-width: 100px;
-  max-height: 100px;
+  width: calc(33.33%-16px);
+  height: 340px;
 }

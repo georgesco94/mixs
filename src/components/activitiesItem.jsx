@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class ActivtitiesItem extends Component {
   constructor(props) {

@@ -4,13 +4,13 @@ import Activities from './activities';
 
 
 
-import '../styles/home.css';
+import '../styles/main.css';
 
 class Home extends Component {
   render() {
     const {activities,filterText} = this.props;
     return (
-      <div className="home">
+      <div className="main">
         <Banner />
         <Activities activities={activities} filterText={filterText} />
       </div>

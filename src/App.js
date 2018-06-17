@@ -19,9 +19,14 @@ class App extends Component {
     this.updateSelected = this.updateSelected.bind(this);
     this.updateFilterText = this.updateFilterText.bind(this);
     this.getFilteredActivities = this.getFilteredActivities.bind(this);
+    this.fetchActivities = this.fetchActivities.bind(this);
   }
 
   componentDidMount() {
+    this.fetchActivities();
+  }
+
+  fetchActivities() {
     const url = 'http://www.mocky.io/v2/5b26d6ac3000007f00ee27b5';
 
     fetch(url)
@@ -71,7 +76,9 @@ class App extends Component {
             path={`/events/:id`}
             render={ (props) => <Activity {...props}
                       activity={activities[selected]}
-                      updateSelected={this.updateSelected}/>} />
+                      fetchActivities={this.fetchActivities}
+                      updateSelected={this.updateSelected}/>}
+          />
           <Footer />
         </div>
       </Router>

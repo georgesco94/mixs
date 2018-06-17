@@ -1,0 +1,17 @@
+.acitvity-grid {
+  width: 85%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 13px;
+}
+
+.image-description-box {
+  max-width: 550px;
+  max-height: 650px;
+}
+.activity-text {
+  margin-top: 9px;
+  font-size: 24px;
+}

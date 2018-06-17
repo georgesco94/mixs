@@ -42,11 +42,14 @@ class App extends Component {
 
   getFilteredActivities() {
     const activities = Object.values(this.state.activities);
-    const filterText = this.state.filterText;
+    const filterText = this.state.filterText.toLowerCase();
 
     const filteredActivities = activities.filter( (activity) => {
+      const location = activity.location.toLowerCase();
+      const city = activity.city.toLowerCase();
+
       return (
-        (activity.location.includes(filterText) || activity.city.includes(filterText))
+        (location.includes(filterText) || city.includes(filterText))
       );
     });
 

@@ -22,6 +22,7 @@ class Activities extends Component {
   }
 
   render() {
+    console.log(this.props.filterText);
     const activities = this.state.activities;
     const activityItems = activities.map( (activity) => {
       return (<ActivtitiesItem activity={activity} />);

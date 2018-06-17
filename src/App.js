@@ -5,6 +5,7 @@ import Nav from "../src/components/nav";
 import Footer from "../src/components/footer";
 import Home from "../src/components/home";
 import EventPage from "../src/components/eventPage";
+import Activity from "../src/components/activity";
 
 import './styles/app.css';
 
@@ -12,7 +13,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filterText: ""
+      filterText: "ex"
     };
   }
 
@@ -21,7 +22,8 @@ class App extends Component {
       <Router>
         <div className="App">
           <Nav />
-          <Home filterText={this.state.filterText} />
+          <Route exact path="/" render={(props) => <Home {...props} filterText={this.state.filterText} />} />
+          <Activity path="/events" />
           <Footer />
         </div>
       </Router>

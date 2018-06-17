@@ -11,10 +11,11 @@ class Home extends Component {
     super(props);
   }
   render() {
+    const {activities,filterText} = this.props;
     return (
       <div className="home">
         <Banner />
-        <Activities activities={this.props.activities} />
+        <Activities activities={activities} filterText={filterText} />
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Search from './search';
+import {Link} from 'react-router-dom';
 
 import '../styles/nav.css';
 
@@ -9,7 +10,7 @@ class Nav extends Component {
       <div className="nav">
         <div className="nav-content">
           <div className="nav-title">
-            DiscoverMixs
+            <Link to="/">DiscoverMixs</Link>
           </div>
           <Search />
         </div>

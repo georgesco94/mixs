@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Link } from 'react-router-dom';
 import Activity from './activity';
+import Badge from './badge';
 
 const numToMonth = {
   1: "Jan",
@@ -32,16 +33,14 @@ class ActivtitiesItem extends Component {
 
     return (
       <div className="activity-box">
-        <div className="activity-image-box">
-          <img className="activity-image" src={image} />
-          <div className="date-badge">
-            <span className="day">{day}</span>
-            <span className="month">{month}</span>
+        <Link to={`/events/${id}`}>
+          <div className="activity-image-box">
+            <img className="activity-image" src={image} />
+            <Badge day={day} month={month} />
           </div>
-        </div>
-        <div className="activity-info-box">
-          <Link to={`/events/${id}`}>{location}</Link>
-        </div>
+          <div className="activity-info-box">
+          </div>
+        </Link>
       </div>
     );
   }

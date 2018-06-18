@@ -52,7 +52,16 @@
     padding-left: 0;
     padding-right: 0;
   }
+  .activity-text {
+    line-height: 20px;
+    font-size: 17px;
+    height: 40%;
+  }
+  .google-map {
+    height: 60%;
+  }
   .map-location-box {
     flex-direction: column;
+    height: 300px;
   }
 }

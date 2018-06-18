@@ -31,7 +31,7 @@ class Activity extends Component {
           </div>
 
           <div className="map-location-box">
-            {city} <br /> for a duration of {duration} hours
+            {city} <br /> Duration of {duration} hours
             <GoogleMapReact
               bootstrapURLKeys={{ key: 'AIzaSyBkx5v_WpasWf7d9Dqjz3h1y6xp2TnSDEY' }}
               defaultCenter={center}

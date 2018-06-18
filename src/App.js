@@ -27,7 +27,7 @@ class App extends Component {
   }
 
   fetchActivities() {
-    const url = 'http://www.mocky.io/v2/5b26f5083000007f00ee27d2';
+    const url = 'http://www.mocky.io/v2/5b26f63a3000006206ee27d7';
 
     fetch(url)
       .then( results => results.json()).then(acts => {

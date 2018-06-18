@@ -6,7 +6,7 @@ class Marker extends Component {
   render() {
     return (
       <div className="marker">
-        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <i className="fa fa-map-marker" aria-hidden="true"></i>
       </div>
     );
   }

@@ -16,7 +16,7 @@ class Nav extends Component {
           {isAtHomePage ?
                   <Search updateFilterText={this.props.updateFilterText}/>
                   : <Link to="/">
-                      <i class="fas fa-arrow-alt-circle-left"></i>    
+                      <i className="fas fa-arrow-alt-circle-left"></i>    
                     </Link>}
         </div>
       </div>

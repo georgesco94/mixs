@@ -3,6 +3,7 @@ import '../styles/main.css';
 import '../styles/activity.css';
 import GoogleMapReact from 'google-map-react';
 import Marker from './marker';
+import {constants} from './constants.js';
 
 class Activity extends Component {
 
@@ -18,6 +19,9 @@ class Activity extends Component {
       lng: location_lng
     };
     const defaultZoom = 11;
+    const eventDate = new Date(date);
+    const day = eventDate.getDate();
+    const month = constants.numToMonth[ eventDate.getMonth() ];
     return (
       <div className="main">
         <div className="acitvity-grid">
@@ -31,7 +35,7 @@ class Activity extends Component {
           <div className="map-location-box">
             <div className="activity-text">
               {description}. <br/>
-              Come to {location} in {city}!
+            Come to {location} in {city} on {date}
               <br/>Duration: {duration} hours
             </div>
             <GoogleMapReact className="google-map"

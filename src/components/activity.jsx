@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../styles/main.css';
 import '../styles/activity.css';
 import GoogleMapReact from 'google-map-react';
+import Marker from './marker';
 
 class Activity extends Component {
 
@@ -16,6 +17,7 @@ class Activity extends Component {
       lat: location_lat,
       lng: location_lng
     };
+    const defaultZoom = 11;
     return (
       <div className="main">
         <div className="acitvity-grid">
@@ -24,19 +26,21 @@ class Activity extends Component {
             <div className="img-container">
               <img className="activity-img" src={image} />
             </div>
-            <div className="activity-text">
-              {description}. <br/>
-              Come to {location} in {city}!
-            </div>
           </div>
 
           <div className="map-location-box">
-            {city} <br /> Duration of {duration} hours
-            <GoogleMapReact
+            <div className="activity-text">
+              {description}. <br/>
+              Come to {location} in {city}!
+              <br/>Duration: {duration} hours
+            </div>
+            <GoogleMapReact className="google-map"
               bootstrapURLKeys={{ key: 'AIzaSyBkx5v_WpasWf7d9Dqjz3h1y6xp2TnSDEY' }}
               defaultCenter={center}
-              defaultZoom={11}
-             />
+              defaultZoom={defaultZoom}
+             >
+             <Marker lat={center.lat} lng={center.lng} />
+            </GoogleMapReact>
           </div>
 
         </div>

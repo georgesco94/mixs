@@ -13,7 +13,7 @@ class Activity extends Component {
 
   render() {
     if (!this.props.activity) return null ;
-    const {image,description,location,city,date,duration,location_lat,location_lng} = this.props.activity;
+    const {image,description,time,location,city,date,duration,location_lat,location_lng} = this.props.activity;
     const center = {
       lat: location_lat,
       lng: location_lng
@@ -35,8 +35,11 @@ class Activity extends Component {
           <div className="map-location-box">
             <div className="activity-text">
               {description}. <br/>
-            Come to {location} in {city} on {date}
-              <br/>Duration: {duration} hours
+              <span>
+                Come to {location} in {city} on {month} {day}.
+                Starts at {time}
+                <br/>Duration: {duration} hours
+              </span>
             </div>
             <GoogleMapReact className="google-map"
               bootstrapURLKeys={{ key: 'AIzaSyBkx5v_WpasWf7d9Dqjz3h1y6xp2TnSDEY' }}

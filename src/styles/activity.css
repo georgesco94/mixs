@@ -43,7 +43,7 @@
     height: 300px;
   }
 }
-@media(max-width:650px) {
+@media(max-width:460px) {
   .image-description-box  {
     height: 240px;
   }

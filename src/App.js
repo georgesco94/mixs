@@ -40,8 +40,7 @@ class App extends Component {
     this.setState( {selected : id} );
   }
 
-  updateFilterText(e) {
-    const filterString = e.target.value;
+  updateFilterText(filterString) {
     this.setState( {filterText: filterString} );
   }
 
@@ -71,7 +70,9 @@ class App extends Component {
           <Nav updateFilterText={this.updateFilterText}/>
           <Route
             exact path="/"
-            render={(props) => <Home {...props} activities={activities} />} />
+            render={(props) => <Home {...props}
+                                  updateFilterText={this.updateFilterText}
+                                  activities={activities} />} />
           <Route
             path={`/events/:id`}
             render={ (props) => <Activity {...props}

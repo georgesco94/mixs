@@ -7,7 +7,12 @@ import '../styles/activities.css';
 
 class Activities extends Component {
 
+  componentDidMount() {
+    console.log('mounting');
+  }
+
   render() {
+
     const activities = this.props.activities;
     const activityItems = Object.keys(activities).map( (id,idx) => {
       return (<ActivtitiesItem key={idx} activityId={id} activity={ activities[id] } />);

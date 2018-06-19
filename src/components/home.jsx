@@ -7,6 +7,9 @@ import Activities from './activities';
 import '../styles/main.css';
 
 class Home extends Component {
+  componentDidMount() {
+    this.props.updateFilterText("");
+  }
   render() {
     const {activities,filterText} = this.props;
     return (

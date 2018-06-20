@@ -23,17 +23,18 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.fetchActivities();
+    this.fetchActivities().then(activities => {
+      this.setState( { activities: activities } );
+    });
   }
 
   fetchActivities() {
     const url = 'http://www.mocky.io/v2/5b26f9ed3000006206ee27df';
 
-    fetch(url)
-      .then( results => results.json()).then(acts => {
-        this.setState( { activities: acts } );
-      }
-    );
+    const activitiesStream = fetch(url);
+    const activitiesAsJSON = activitiesStream.then( stream => stream.json());
+
+    return activitiesAsJSON;
   }
 
   updateSelected(id) {
